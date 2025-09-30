@@ -1,5 +1,7 @@
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+            self, name: str, appetite: int, is_hungry: bool = True
+    ) -> None:
         self.name = name
         self.appetite = appetite
         self.is_hungry = is_hungry
@@ -29,8 +31,9 @@ class Dog(Animal):
         super().__init__(name, 7, is_hungry)
 
     @staticmethod
-    def bring_slippers():
+    def bring_slippers() -> None:
         print(" The slippers delivered!")
+
 
 def feed_animals(animals_list: list[Animal]) -> int:
     food_points = 0
